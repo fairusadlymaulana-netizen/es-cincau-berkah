@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Es Cincau Hijau Berkah</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#e8f5e9;
+    margin:0;
+    padding:20px;
+}
+.container{
+    max-width:500px;
+    margin:auto;
+}
+.card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+h1{
+    text-align:center;
+    color:#2e7d32;
+}
+button{
+    width:100%;
+    padding:15px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:#2e7d32;
+    color:white;
+}
+input{
+    width:100%;
+    padding:10px;
+    font-size:18px;
+    margin-top:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+<h1>🥤 Es Cincau Hijau Berkah</h1>
+<h2>Kasir Sederhana</h2>
+</div>
+
+<div class="card">
+<label>Jumlah Gelas Terjual</label>
+<input type="number" id="gelas" value="0">
+</div>
+
+<div class="card">
+<label>Harga per Gelas</label>
+<input type="number" id="harga" value="5000">
+</div>
+
+<div class="card">
+<button onclick="hitung()">Hitung Omzet</button>
+</div>
+
+<div class="card">
+<h2 id="hasil">Omzet : Rp0</h2>
+</div>
+
+</div>
+
+<script>
+function hitung(){
+let gelas=document.getElementById("gelas").value;
+let harga=document.getElementById("harga").value;
+let total=gelas*harga;
+
+document.getElementById("hasil").innerHTML="Omzet : Rp"+total.toLocaleString("id-ID");
+}
+</script>
+
+</body>
+</html>
